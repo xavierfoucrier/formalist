@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Formalist &mdash; Conditional webform plugin</title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="https://raw.github.com/xavierfoucrier/Formalist/master/jquery.formalist.min.js"></script>
+		<style type="text/css">
+			body {font-family:Arial;color:#fcfcfc;text-align:center;background:#de4c4c;max-width:800px;margin:0 auto;}
+			header {font-style:italic;}
+			header p {margin:0;padding-bottom:25px;}
+			hr {border:none;border-top:3px solid #e65e5b;}
+			form {margin:0 0 40px 0;}
+			form .hidden {display:none;}
+			form .visible {display:block;}
+			form .box {margin:5px 0;}
+			pre {margin:0;}
+			code {font-family: Consolas, "Courier New", Courier, monospace;font-size:12px;display:block;margin:0 auto;text-align:left;overflow-x:auto;padding:0 25px;background:#e65e5b;color:#ffeeee;}
+			code em {display:block;float:right;text-transform:uppercase;color:#fda2a2;font-weight:bold;}
+			a {color:#fda2a2;}
+		</style>
+		<script type="text/javascript">
+			$(function(){
+				$('#form1').formalist();
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<img src="https://raw.github.com/xavierfoucrier/Formalist/master/logo.png" alt="Formalist - Conditional webform plugin" width="400" height="140" />
+		</header>
+		<hr />
+		<h2>Demo</h2>
+		<form id="form1">
+			<div class="box">
+				<label>Operating system:</label>
+				<label><input type="radio" name="system" id="macintosh" value="Macintosh" />Macintosh</label>
+				<label><input type="radio" name="system" id="unix" value="Unix" />Unix</label>
+				<label><input type="radio" name="system" id="windows" value="Windows" />Windows</label>
+			</div>
+			<div class="box" data-show="macintosh" data-hide="system">
+				<label>Select your Macintosh version:</label>
+				<select name="macintoshversion">
+					<option>-</option>
+					<option value="macosx">Mac OS X</option>
+					<option value="macos9">Mac OS 9</option>
+				</select>
+			</div>
+			<div class="box" data-show="unix" data-hide="system">
+				<label>Select your Unix version:</label>
+				<select name="unixversion">
+					<option>-</option>
+					<option value="ubuntu">Ubuntu</option>
+					<option value="jolicloud">Jolicloud</option>
+					<option value="chromeos">Chrome OS</option>
+				</select>
+			</div>
+			<div class="box" data-show="windows" data-hide="system">
+				<label>Select your Windows version:</label>
+				<select name="windowsversion">
+					<option>-</option>
+					<option value="windows8">Windows 8</option>
+					<option value="windows7">Windows 7</option>
+					<option value="windowsvista">Windows Vista</option>
+					<option value="windowsxp">Windows Xp</option>
+				</select>
+			</div>
+			<div class="box" data-show="macosx" data-hide="system macintoshversion">
+				<label>Select your MAC OS X version:</label>
+				<select>
+					<option>-</option>
+					<option value="macosxversion">10.9</option>
+					<option value="macosxversion">10.8</option>
+					<option value="macosxversion">10.7</option>
+					<option value="macosxversion">10.6</option>
+					<option value="macosxversion">10.5</option>
+					<option value="macosxversion">10.4</option>
+					<option value="macosxversion">10.3</option>
+					<option value="macosxversion">10.2</option>
+					<option value="macosxversion">10.1</option>
+					<option value="macosxversion">10.0</option>
+				</select>
+			</div>
+			<div class="box" data-show="macos9" data-hide="system macintoshversion">
+				<label>Select your MAC OS 9 version:</label>
+				<select>
+					<option>-</option>
+					<option value="macos9version">9.2.2</option>
+					<option value="macos9version">9.2.1</option>
+					<option value="macos9version">9.1</option>
+					<option value="macos9version">9.0.4</option>
+					<option value="macos9version">9.0</option>
+				</select>
+			</div>
+			<div class="box" data-show="ubuntu" data-hide="system unixversion">
+				<label>Select your  version:</label>
+				<select>
+					<option>-</option>
+					<option value="ubuntuversion">13.10</option>
+					<option value="ubuntuversion">13.04</option>
+					<option value="ubuntuversion">12.10</option>
+					<option value="ubuntuversion">12.04</option>
+					<option value="ubuntuversion">11.10</option>
+					<option value="ubuntuversion">11.04</option>
+					<option value="ubuntuversion">10.10</option>
+					<option value="ubuntuversion">10.04</option>
+				</select>
+			</div>
+			<div class="box" data-show="jolicloud" data-hide="system unixversion">
+				<label>Select your  version:</label>
+				<select>
+					<option>-</option>
+					<option value="jolicloudversion">1.2</option>
+					<option value="jolicloudversion">1.1</option>
+					<option value="jolicloudversion">1.0</option>
+				</select>
+			</div>
+			<div class="box" data-show="chromeos" data-hide="system unixversion">
+				<label>Select your  version:</label>
+				<select>
+					<option>-</option>
+					<option value="chromeosversion">Latest</option>
+					<option value="chromeosversion">Bêta</option>
+				</select>
+			</div>
+			<div class="box" data-show="windows8" data-hide="system windowsversion">
+				<label>Select your  version:</label>
+				<select>
+					<option>-</option>
+					<option value="windows8version">8.1</option>
+					<option value="windows8version">8.0</option>
+				</select>
+			</div>
+			<div class="box" data-show="windows7" data-hide="system windowsversion">
+				<label>Select your  version:</label>
+				<select>
+					<option>-</option>
+					<option value="windows7version">7.0 SP1</option>
+					<option value="windows7version">7.0</option>
+				</select>
+			</div>
+			<div class="box" data-show="windowsvista" data-hide="system windowsversion">
+				<label>Select your  version:</label>
+				<select>
+					<option>-</option>
+					<option value="windowsvistaversion">6.0 SP2</option>
+					<option value="windowsvistaversion">6.0 SP1</option>
+					<option value="windowsvistaversion">6.0</option>
+				</select>
+			</div>
+			<div class="box" data-show="windowsxp" data-hide="system windowsversion">
+				<label>Select your  version:</label>
+				<select>
+					<option>-</option>
+					<option value="windowsxpversion">5.1</option>
+					<option value="windowsxpversion">5.0</option>
+				</select>
+			</div>
+			<div class="box" data-show="macosxversion" data-hide="*">
+				Mac OS X is a series of Unix-based graphical interface operating systems developed, marketed, and sold by Apple Inc.
+			</div>
+			<div class="box" data-show="macos9version" data-hide="*">
+				Mac OS 9 is the final major release of Apple's Classic Mac OS operating system.
+			</div>
+			<div class="box" data-show="ubuntuversion" data-hide="*">
+				Ubuntu is a Debian-based Linux operating system, with Unity as its default desktop environment.
+			</div>
+			<div class="box" data-show="jolicloudversion" data-hide="*">
+				Jolicloud OS is an Ubuntu-based Linux distribution developed by the French company Jolicloud.
+			</div>
+			<div class="box" data-show="chromeosversion" data-hide="*">
+				Chrome OS is a Linux-based operating system designed by Google to work primarily with web applications.
+			</div>
+			<div class="box" data-show="windows8version" data-hide="*">
+				Windows 8 is a personal computer operating system developed by Microsoft as part of Windows NT family of operating systems.
+			</div>
+			<div class="box" data-show="windows7version" data-hide="*">
+				Windows 7 is an operating system produced by Microsoft for use on personal computers, including home and business desktops, laptops, netbooks, tablet PCs, and media center PCs.
+			</div>
+			<div class="box" data-show="windowsvistaversion" data-hide="*">
+				Windows Vista is an operating system by Microsoft for use on personal computers, including home and business desktops, laptops, tablet PCs, and media center PCs.
+			</div>
+			<div class="box" data-show="windowsxpversion" data-hide="*">
+				Windows XP is an operating system produced by Microsoft for use on personal computers, including home and business desktops, laptops and media centers.
+			</div>
+		</form>
+		<hr />
+		<h2>Source code</h2>
+		<pre>
+			<code>
+			<em>javascript</em>
+$(function(){
+  $('#form1').formalist();
+});
+			</code>
+		</pre>
+		<pre>
+			<code>
+			<em>css</em>
+form .hidden {display:none;}
+form .visible {display:block;}
+			</code>
+		</pre>
+		<pre>
+			<code>
+			<em>html</em>
+&lt;form id="form1"&gt;
+  &lt;div class="box"&gt;
+    &lt;label&gt;Operating system:&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="system" id="macintosh" value="Macintosh" /&gt;Macintosh&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="system" id="unix" value="Unix" /&gt;Unix&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="system" id="windows" value="Windows" /&gt;Windows&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="box" data-show="macintosh" data-hide="system"&gt;
+    &lt;label&gt;Select your Macintosh version:&lt;/label&gt;
+    &lt;select name="macintoshversion"&gt;
+      &lt;option&gt;-&lt;/option&gt;
+      &lt;option value="macosx"&gt;Mac OS X&lt;/option&gt;
+      &lt;option value="macos9"&gt;Mac OS 9&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class="box" data-show="unix" data-hide="system"&gt;
+    &lt;label&gt;Select your Unix version:&lt;/label&gt;
+    &lt;select name="unixversion"&gt;
+      &lt;option&gt;-&lt;/option&gt;
+      &lt;option value="ubuntu"&gt;Ubuntu&lt;/option&gt;
+      &lt;option value="jolicloud"&gt;Jolicloud&lt;/option&gt;
+      &lt;option value="chromeos"&gt;Chrome OS&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class="box" data-show="windows" data-hide="system"&gt;
+    &lt;label&gt;Select your Windows version:&lt;/label&gt;
+    &lt;select name="windowsversion"&gt;
+      &lt;option&gt;-&lt;/option&gt;
+      &lt;option value="windows8"&gt;Windows 8&lt;/option&gt;
+      &lt;option value="windows7"&gt;Windows 7&lt;/option&gt;
+      &lt;option value="windowsvista"&gt;Windows Vista&lt;/option&gt;
+      &lt;option value="windowsxp"&gt;Windows Xp&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class="box" data-show="macosx" data-hide="system macintoshversion"&gt;
+    &lt;label&gt;Select your MAC OS X version:&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;-&lt;/option&gt;
+      &lt;option value="macosxversion"&gt;10.9&lt;/option&gt;
+      &lt;option value="macosxversion"&gt;10.8&lt;/option&gt;
+      &lt;option value="macosxversion"&gt;10.7&lt;/option&gt;
+      &lt;option value="macosxversion"&gt;10.6&lt;/option&gt;
+      &lt;option value="macosxversion"&gt;10.5&lt;/option&gt;
+      &lt;option value="macosxversion"&gt;10.4&lt;/option&gt;
+      &lt;option value="macosxversion"&gt;10.3&lt;/option&gt;
+      &lt;option value="macosxversion"&gt;10.2&lt;/option&gt;
+      &lt;option value="macosxversion"&gt;10.1&lt;/option&gt;
+      &lt;option value="macosxversion"&gt;10.0&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class="box" data-show="macos9" data-hide="system macintoshversion"&gt;
+    &lt;label&gt;Select your MAC OS 9 version:&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;-&lt;/option&gt;
+      &lt;option value="macos9version"&gt;9.2.2&lt;/option&gt;
+      &lt;option value="macos9version"&gt;9.2.1&lt;/option&gt;
+      &lt;option value="macos9version"&gt;9.1&lt;/option&gt;
+      &lt;option value="macos9version"&gt;9.0.4&lt;/option&gt;
+      &lt;option value="macos9version"&gt;9.0&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class="box" data-show="ubuntu" data-hide="system unixversion"&gt;
+    &lt;label&gt;Select your  version:&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;-&lt;/option&gt;
+      &lt;option value="ubuntuversion"&gt;13.10&lt;/option&gt;
+      &lt;option value="ubuntuversion"&gt;13.04&lt;/option&gt;
+      &lt;option value="ubuntuversion"&gt;12.10&lt;/option&gt;
+      &lt;option value="ubuntuversion"&gt;12.04&lt;/option&gt;
+      &lt;option value="ubuntuversion"&gt;11.10&lt;/option&gt;
+      &lt;option value="ubuntuversion"&gt;11.04&lt;/option&gt;
+      &lt;option value="ubuntuversion"&gt;10.10&lt;/option&gt;
+      &lt;option value="ubuntuversion"&gt;10.04&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class="box" data-show="jolicloud" data-hide="system unixversion"&gt;
+    &lt;label&gt;Select your  version:&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;-&lt;/option&gt;
+      &lt;option value="jolicloudversion"&gt;1.2&lt;/option&gt;
+      &lt;option value="jolicloudversion"&gt;1.1&lt;/option&gt;
+      &lt;option value="jolicloudversion"&gt;1.0&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class="box" data-show="chromeos" data-hide="system unixversion"&gt;
+    &lt;label&gt;Select your  version:&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;-&lt;/option&gt;
+      &lt;option value="chromeosversion"&gt;Latest&lt;/option&gt;
+      &lt;option value="chromeosversion"&gt;Bêta&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class="box" data-show="windows8" data-hide="system windowsversion"&gt;
+    &lt;label&gt;Select your  version:&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;-&lt;/option&gt;
+      &lt;option value="windows8version"&gt;8.1&lt;/option&gt;
+      &lt;option value="windows8version"&gt;8.0&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class="box" data-show="windows7" data-hide="system windowsversion"&gt;
+    &lt;label&gt;Select your  version:&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;-&lt;/option&gt;
+      &lt;option value="windows7version"&gt;7.0 SP1&lt;/option&gt;
+      &lt;option value="windows7version"&gt;7.0&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class="box" data-show="windowsvista" data-hide="system windowsversion"&gt;
+    &lt;label&gt;Select your  version:&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;-&lt;/option&gt;
+      &lt;option value="windowsvistaversion"&gt;6.0 SP2&lt;/option&gt;
+      &lt;option value="windowsvistaversion"&gt;6.0 SP1&lt;/option&gt;
+      &lt;option value="windowsvistaversion"&gt;6.0&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class="box" data-show="windowsxp" data-hide="system windowsversion"&gt;
+    &lt;label&gt;Select your  version:&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;-&lt;/option&gt;
+      &lt;option value="windowsxpversion"&gt;5.1&lt;/option&gt;
+      &lt;option value="windowsxpversion"&gt;5.0&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class="box" data-show="macosxversion" data-hide="*"&gt;
+    Mac OS X is a series of Unix-based graphical interface operating systems developed, marketed, and sold by Apple Inc.
+  &lt;/div&gt;
+  &lt;div class="box" data-show="macos9version" data-hide="*"&gt;
+    Mac OS 9 is the final major release of Apple's Classic Mac OS operating system.
+  &lt;/div&gt;
+  &lt;div class="box" data-show="ubuntuversion" data-hide="*"&gt;
+    Ubuntu is a Debian-based Linux operating system, with Unity as its default desktop environment.
+  &lt;/div&gt;
+  &lt;div class="box" data-show="jolicloudversion" data-hide="*"&gt;
+    Jolicloud OS is an Ubuntu-based Linux distribution developed by the French company Jolicloud.
+  &lt;/div&gt;
+  &lt;div class="box" data-show="chromeosversion" data-hide="*"&gt;
+    Chrome OS is a Linux-based operating system designed by Google to work primarily with web applications.
+  &lt;/div&gt;
+  &lt;div class="box" data-show="windows8version" data-hide="*"&gt;
+    Windows 8 is a personal computer operating system developed by Microsoft as part of Windows NT family of operating systems.
+  &lt;/div&gt;
+  &lt;div class="box" data-show="windows7version" data-hide="*"&gt;
+    Windows 7 is an operating system produced by Microsoft for use on personal computers, including home and business desktops, laptops, netbooks, tablet PCs, and media center PCs.
+  &lt;/div&gt;
+  &lt;div class="box" data-show="windowsvistaversion" data-hide="*"&gt;
+    Windows Vista is an operating system by Microsoft for use on personal computers, including home and business desktops, laptops, tablet PCs, and media center PCs.
+  &lt;/div&gt;
+  &lt;div class="box" data-show="windowsxpversion" data-hide="*"&gt;
+    Windows XP is an operating system produced by Microsoft for use on personal computers, including home and business desktops, laptops and media centers.
+  &lt;/div&gt;
+&lt;/form&gt;
+			</code>
+		</pre>
+		<hr />
+		<h2>Github</h2>
+		<p>This demo sample comes from a Github repository.<br />You can check it out at <a href="https://github.com/xavierfoucrier/Formalist" target="_blank">https://github.com/xavierfoucrier/Formalist</a>.</p><br />
+	</body>
+</html>
