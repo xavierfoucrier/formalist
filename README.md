@@ -2,6 +2,8 @@ Formalist
 =========
 Formalist is a jQuery plugin to perform **conditional web forms**. Thanks to the use of the HTML5 `data-` attribute, the plugin easily recognized elements to be displayed or hidden conditionally in your form. For example, when a checkbox is checked or a radio button is selected, Formalist will automatically performs the corresponding actions by masking or displaying the elements in cascade.
 
+![Formalist](https://raw.github.com/xavierfoucrier/Formalist/master/logo.png "Formalist")
+
 
 Compatibility
 -------------
@@ -20,22 +22,39 @@ To ensure a stable running of Formalist, you need to have **some requirements** 
 Note that jQuery 2.0 or higher doesn't support IE 6/7/8 anymore.
 
 
+Download
+--------
+Latest stable release:
+
+- [Production `jquery.formalist.min.js`](https://raw.github.com/xavierfoucrier/Formalist/master/jquery.formalist.min.js) - 1.93KB, 661B gzipped
+- [Development `jquery.formalist.js`](https://raw.github.com/xavierfoucrier/Formalist/master/jquery.formalist.js) - 3.87KB, 1.09KB gzipped
+
+The version's notation is based on `Semantic versioning`, [http://semver.org](http://semver.org).
+
+
 Documentation
 -------------
-Coming soon with first release of the plugin.
+Here you will find the documentation describing **how to use** the jQuery plugin.
+
+1. [How it works](https://github.com/xavierfoucrier/Formalist/blob/master/DOCUMENTATION.md#how-it-works) - how the plugin do the stuff
+2. [Markup](https://github.com/xavierfoucrier/Formalist/blob/master/DOCUMENTATION.md#markup) - how should the HTML and CSS look like
+3. [Calling](https://github.com/xavierfoucrier/Formalist/blob/master/DOCUMENTATION.md#calling) - how to call Formalist
+4. [Options](https://github.com/xavierfoucrier/Formalist/blob/master/DOCUMENTATION.md#options) - all available options
+5. [Examples](https://github.com/xavierfoucrier/Formalist/blob/master/DOCUMENTATION.md#examples) - some case studies
+6. [Demos](https://github.com/xavierfoucrier/Formalist/blob/master/DOCUMENTATION.md#demos) - some demos in action
 
 
 Updates
 -------
-You can track the project on [Github](http://github.com/xavierfoucrier) and/or follow me on [Twitter](http://twitter.com/xavierfoucrier).
+You can **track the project** on [Github](http://github.com/xavierfoucrier) and/or **follow me** on [Twitter](http://twitter.com/xavierfoucrier).
 
 
-Contributing
-------------
-If you want to report a bug or if you just want to request for a new feature / improvement, you can simply use the **Github tracker**: please describe as much as possible the issue you encounter.
+Contribute
+----------
+If you want to report a bug or if you just want to request for a new feature / improvement, you can simply use the **Github tracker**: please describe as much as possible the issue you encountered.
 
 
-Licence
+License
 -------
 The project is developed under the **Creative Commons** license with the reference [BY-NC 4.0](http://creativecommons.org/licenses/by-nc/4.0/) which means that you are free to share, copy, distribute, adapt, remix and transmit the work under the following conditions:
 
@@ -47,5 +66,5 @@ See the [full legal code](http://creativecommons.org/licenses/by-nc/4.0/) of the
 
 Questions?
 ----------
-If you have any questions, please feel free to contact me!  
+If you have any questions, please **feel free to contact me!**  
 Check out my website at [http://en.xavierfoucrier.fr](http://en.xavierfoucrier.fr).
