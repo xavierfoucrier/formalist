@@ -15,13 +15,13 @@ Summary
 
 How it works
 ------------
-Formalist allow you to create specific **conditional web forms**: this means it can automate and facilitate the realization of web forms **similar to conditional trees** in different combinations which are defined to go from point A to point B. Unlike a conventional form in which you must encode all your conditions in javascript, Formalist offers you the opportunity to make them flexible by **integrating them directly into the HTML source** of your form so you can easily change them later without rewriting a piece of code. Don't forget that **Formalist is not a validator**: it will not help you validate your form and checking your input fields before submit.
+Formalist allows you to create specific **conditional web forms**: this means it can automate and facilitate the realization of web forms **similar to conditional trees** in different combinations which are defined to go from point A to point B. Unlike a conventional form in which you must encode all your conditions in javascript, Formalist offers you the opportunity to make them flexible by **integrating them directly into the HTML source** of your form so you can easily change them later without rewriting a piece of code. Don't forget that **Formalist is not a validator**: it will not help you validate your form and checking your input fields before submit.
 
 
 Markup
 ------
 ### Box
-The box is a group of elements, it represent the **different sections of the form** and generally contain input fields. By default on Formalist, a box is a div with a css class named `box`. Formalist targets the box with the jQuery class selector (`.classname`) that checks the css class name of an element so you can **easily define your own css class** for pointing on a specific element of your form: see the `box` option for more informations.
+The box is a group of elements, it represents the **different sections of the form** and generally contains input fields. By default on Formalist, a box is a div with a css class named `box`. Formalist targets the box with the jQuery class selector (`.classname`) that checks the css class name of an element so you can **easily define your own css class** for pointing on a specific element of your form: see the `box` option for more informations.
 
 ```html
 <form id="form1">
@@ -75,15 +75,15 @@ Instantiate and calling the plugin is **very easy**. Just start by include the j
 Then call the plugin by using the default plugin call syntax of jQuery:
 
 ```js
-$(function){
+$(function(){
 	$('#form1').formalist();
 });
 ```
 
-You can call the plugin with **multiple form identifiers** (comma-separated), like this:
+You can call the plugin with **multiple form identifiers** *(comma-separated)*, like this:
 
 ```js
-$(function){
+$(function(){
 	$('#form1,#form2,#form3').formalist();
 });
 ```
@@ -91,7 +91,7 @@ $(function){
 The calling is different if you want to call the plugin with custom options:
 
 ```js
-$(function){
+$(function(){
 	$('#form1').formalist({
 		selector: 'input[class="radio"]',
 		event: 'click,dblclick'
@@ -150,7 +150,7 @@ The selector allows you to define all the elements with which the Formalist plug
 Type: `String`
 Default: `change`
 
-The event binded by Formalist and attached to the input fields of the form. By default, Formalist binds the `change` event to take control of all input defined in the `selector` option. You can pass **more that one event to this option** which must be a comma-separated value.
+The event bound by Formalist and attached to the input fields of the form. By default, Formalist binds the `change` event to take control of all input defined in the `selector` option. You can pass **more that one event to this option** which must be a comma-separated value.
 
 #### box
 Type: `String`
@@ -217,6 +217,12 @@ Some examples working with the default plugin options.
 		You choose "no"
 	</div>
 </form>
+```
+
+```js
+$(function(){
+	$('#form1').formalist();
+});
 ```
 
 This example behaves this way:
