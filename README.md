@@ -7,7 +7,7 @@ Formalist is a jQuery plugin to perform **conditional web forms**. Thanks to the
 
 Compatibility
 -------------
-Formalist is fully tested on **Google Chrome** for desktop *(latest public released version)* and on a **Google Nexus 7** tablet with `Android "Kit Kat" 4.4.2`. The plugin is compatible with browser that natively support, or not, the HTML5 `data-` attribute.
+Formalist is fully tested on **Google Chrome** for desktop *(latest public released version)* and on a **Google Nexus 7** tablet with `Android "Kit Kat" 4.4.4`. The plugin is compatible with browser that natively support, or not, the HTML5 `data-` attribute.
 
 Official support on Chrome 24+, Firefox 20+, Safari 5+, IE 9+ and Opera 11+. Many other browsers may work, but are not extensively tested.
 
