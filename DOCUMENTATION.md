@@ -235,11 +235,11 @@ This example behaves this way:
 
 Demos
 -----
-Some html demos are available and listed below. **You can download each web page** on your machine and open it directly in your web browser.
+Some html demos are available and listed below. Please don't forget to read the **[compatibility section](https://github.com/xavierfoucrier/formalist/blob/master/README.md#compatibility)** before testing them.
 
-1. [Basic demo](https://raw.github.com/xavierfoucrier/Formalist/master/demos/basic.html) - a simple demo with checkboxs
-2. [Cascade demo](https://raw.github.com/xavierfoucrier/Formalist/master/demos/cascade.html) - cascade demo that shows a multiple nested lists
-3. [Input demo](https://raw.github.com/xavierfoucrier/Formalist/master/demos/input.html) - custom options demo with an input field of type text
-4. [Style demo](https://raw.github.com/xavierfoucrier/Formalist/master/demos/style.html) - pretty css demo to make your form visually awesome
+1. [Basic demo](https://xavierfoucrier.github.io/formalist/index.html) - a simple demo with checkboxs
+2. [Cascade demo](https://xavierfoucrier.github.io/formalist/cascade.html) - cascade demo that shows a multiple nested lists
+3. [Input demo](https://xavierfoucrier.github.io/formalist/input.html) - custom options demo with an input field of type text
+4. [Style demo](https://xavierfoucrier.github.io/formalist/style.html) - pretty css demo to make your form visually awesome
 
 Note that all demos are using jQuery 2.0.3 and the latest version of Formalist from the Github repository.
