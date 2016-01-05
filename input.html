@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Formalist by xavierfoucrier</title>
+		<link rel="stylesheet" href="resources/theme.css">
+		<script type="text/javascript" src="resources/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="resources/jquery.formalist.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#form1').formalist({
+					selector: 'input[type="text"]',
+					event: 'keyup',
+					cascade: 'input[type="text"]:visible',
+					correlate: function(box, field, type, value, name, id) {
+						return type == 'text' && $(field).val() == value;
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<img src="resources/logo.png" alt="Formalist - Conditional webform plugin" width="400" height="140" />
+		</header>
+		<hr />
+		<h2>Input demo</h2>
+		<form id="form1">
+			<div class="box">
+				This is a #<input type="text" placeholder="Formalist" /> demo.<br />
+				<small><em>Just type "Formalist" in the input field.</em></small>
+			</div>
+			<div class="box" data-show="Formalist" data-hide="*">
+				You got it!
+			</div>
+		</form>
+		<hr />
+		<h2>Source code</h2>
+		<pre>
+			<code>
+			<em>javascript</em>
+$(function(){
+  $('#form1').formalist({
+    selector: 'input[type="text"]',
+    event: 'keyup',
+    cascade: 'input[type="text"]:visible',
+    correlate: function(box, field, type, value, name, id) {
+      return type == 'text' && $(field).val() == value;
+    }
+  });
+});
+			</code>
+		</pre>
+		<pre>
+			<code>
+			<em>css</em>
+form .hidden {display:none;}
+form .visible {display:block;}
+			</code>
+		</pre>
+		<pre>
+			<code>
+			<em>html</em>
+&lt;form id="form1"&gt;
+  &lt;div class="box"&gt;
+    This is a #&lt;input type="text" placeholder="Formalist" /&gt; demo.&lt;br /&gt;
+    &lt;small&gt;&lt;em&gt;Just type "Formalist" in the input field.&lt;/em&gt;&lt;/small&gt;
+  &lt;/div&gt;
+  &lt;div class="box" data-show="Formalist" data-hide="*"&gt;
+    You got it!
+  &lt;/div&gt;
+&lt;/form&gt;
+			</code>
+		</pre>
+		<hr />
+		<h2>Other demonstrations</h2>
+		<ul>
+			<li><a href="index.html">Basic demo</a> - a simple demo with checkboxs</li>
+			<li><a href="cascade.html">Cascade demo</a> - cascade demo that shows a multiple nested lists</li>
+			<li><a href="input.html">Input demo</a> - custom options demo with an input field of type text</li>
+			<li><a href="style.html">Style demo</a> - pretty css demo to make your form visually awesome</li>
+		</ul>
+		<hr />
+		<h2>Github</h2>
+		<p>This demo sample comes from a Github repository<br /><a href="https://github.com/xavierfoucrier/formalist" target="_blank">https://github.com/xavierfoucrier/formalist</a></p><p>Made with love by <a href="https://github.com/xavierfoucrier">xavierfoucrier</a></p><br />
+	</body>
+</html>

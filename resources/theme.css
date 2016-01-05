@@ -1,0 +1,17 @@
+body {font-family:Arial;color:#fcfcfc;text-align:center;background:#de4c4c;max-width:800px;margin:0 auto;}
+header {font-style:italic;}
+header p {margin:0;padding-bottom:25px;}
+hr {border:none;border-top:3px solid #e65e5b;}
+form {margin:0 0 40px 0;}
+form .hidden {display:none;}
+form .visible {display:block;}
+form .box {margin:5px 0;}
+input {padding:7px;margin:7px;border:none;font-weight:bold;color:#111;outline:none;}
+label {cursor:pointer;}
+pre {margin:0;}
+code {font-family: Consolas, "Courier New", Courier, monospace;font-size:12px;display:block;margin:0 auto;text-align:left;overflow-x:auto;padding:0 25px;background:#e65e5b;color:#ffeeee;}
+code em {display:block;float:right;text-transform:uppercase;color:#fda2a2;font-weight:bold;}
+a {color:#fda2a2;}
+ul {margin-bottom:25px;}
+li {list-style-type:none;}
+img {margin-top:15px;}

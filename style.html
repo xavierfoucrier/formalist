@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Formalist by xavierfoucrier</title>
+		<link rel="stylesheet" href="resources/theme.css">
+		<script type="text/javascript" src="resources/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="resources/jquery.formalist.min.js"></script>
+		<style type="text/css">
+			form .hidden {color:#e78080;transition:all 0.3s;display:block;}
+			form .visible {color:#fcfcfc !important;font-size:16px !important;transition:all 0.3s;}
+			form .box[data-show] {color:#e78080;font-size:14px;}
+		</style>
+		<script type="text/javascript">
+			$(function(){
+				$('#form1').formalist();
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<img src="resources/logo.png" alt="Formalist - Conditional webform plugin" width="400" height="140" />
+		</header>
+		<hr />
+		<h2>Style demo</h2>
+		<form id="form1">
+			<div class="box">
+				What's your favorite resolution on Youtube?
+				<label><input type="radio" name="resolution" id="1080p" />1080p</label>
+				<label><input type="radio" name="resolution" id="720p" />720p</label>
+				<label><input type="radio" name="resolution" id="480p" />480p</label>
+				<label><input type="radio" name="resolution" id="none" />None</label>
+			</div>
+			<div class="box" data-show="1080p" data-hide="*">
+				You choose the "1080p" resolution
+			</div>
+			<div class="box" data-show="720p" data-hide="*">
+				You choose the "720p" resolution
+			</div>
+			<div class="box" data-show="480p" data-hide="*">
+				You choose the "480p" resolution
+			</div>
+		</form>
+		<hr />
+		<h2>Source code</h2>
+		<pre>
+			<code>
+			<em>javascript</em>
+$(function(){
+  $('#form1').formalist();
+});
+			</code>
+		</pre>
+		<pre>
+			<code>
+			<em>css</em>
+form .hidden {color:#e78080;transition:all 0.3s;}
+form .visible {color:#fcfcfc !important;font-size:16px !important;transition:all 0.3s;}
+form .box[data-show] {color:#e78080;font-size:14px;}
+			</code>
+		</pre>
+		<pre>
+			<code>
+			<em>html</em>
+&lt;form id="form1"&gt;
+  &lt;div class="box"&gt;
+    What's your favorite resolution on Youtube?
+    &lt;label&gt;&lt;input type="radio" name="resolution" id="1080p" /&gt;1080p&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="resolution" id="720p" /&gt;720p&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="resolution" id="480p" /&gt;480p&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="resolution" id="none" /&gt;None&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="box" data-show="1080p" data-hide="*"&gt;
+    You choose the "1080p" resolution
+  &lt;/div&gt;
+  &lt;div class="box" data-show="720p" data-hide="*"&gt;
+    You choose the "720p" resolution
+  &lt;/div&gt;
+  &lt;div class="box" data-show="480p" data-hide="*"&gt;
+    You choose the "480p" resolution
+  &lt;/div&gt;
+&lt;/form&gt;
+			</code>
+		</pre>
+		<hr />
+		<h2>Other demonstrations</h2>
+		<ul>
+			<li><a href="index.html">Basic demo</a> - a simple demo with checkboxs</li>
+			<li><a href="cascade.html">Cascade demo</a> - cascade demo that shows a multiple nested lists</li>
+			<li><a href="input.html">Input demo</a> - custom options demo with an input field of type text</li>
+			<li><a href="style.html">Style demo</a> - pretty css demo to make your form visually awesome</li>
+		</ul>
+		<hr />
+		<h2>Github</h2>
+		<p>This demo sample comes from a Github repository<br /><a href="https://github.com/xavierfoucrier/formalist" target="_blank">https://github.com/xavierfoucrier/formalist</a></p><p>Made with love by <a href="https://github.com/xavierfoucrier">xavierfoucrier</a></p><br />
+	</body>
+</html>
