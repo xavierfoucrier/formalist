@@ -2,7 +2,7 @@ Formalist
 =========
 Formalist is a jQuery plugin to perform **conditional web forms**. Thanks to the use of the HTML5 `data-` attribute, the plugin easily recognized elements to be displayed or hidden conditionally in your form. For example, when a checkbox is checked or a radio button is selected, Formalist will automatically performs the corresponding actions by masking or displaying the elements in cascade.
 
-![Formalist](https://raw.github.com/xavierfoucrier/Formalist/master/logo.png "Formalist")
+[![Formalist](https://raw.github.com/xavierfoucrier/Formalist/master/logo.png "Formalist")](https://xavierfoucrier.github.io/formalist)
 
 
 Compatibility
