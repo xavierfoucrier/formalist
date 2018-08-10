@@ -1,10 +1,8 @@
-Formalist documentation
-=======================
+# Formalist documentation
 Here you will find the documentation describing on how to use the jQuery plugin.
 
 
-Summary
--------
+## Summary
 1. [How it works](#how-it-works)
 2. [Markup](#markup)
 3. [Calling](#calling)
@@ -13,13 +11,11 @@ Summary
 6. [Demos](#demos)
 
 
-How it works
-------------
+## How it works
 Formalist allows you to create specific **conditional web forms**: this means it can automate and facilitate the realization of web forms **similar to conditional trees** in different combinations which are defined to go from point A to point B. Unlike a conventional form in which you must encode all your conditions in javascript, Formalist offers you the opportunity to make them flexible by **integrating them directly into the HTML source** of your form so you can easily change them later without rewriting a piece of code. Don't forget that **Formalist is not a validator**: it will not help you validate your form and checking your input fields before submit.
 
 
-Markup
-------
+## Markup
 ### Box
 The box is a group of elements, it represents the **different sections of the form** and generally contains input fields. By default on Formalist, a box is a div with a css class named `box`. Formalist targets the box with the jQuery class selector (`.classname`) that checks the css class name of an element so you can **easily define your own css class** for pointing on a specific element of your form: see the `box` option for more informations.
 
@@ -63,8 +59,7 @@ Don't forget to set up the stylesheet class in your css file. If not set, Formal
 Note that if you are interested to make your form visually awesome, you can add some css animations or css transitions on those classes for creating nice effects and attracting the visitor's attention.
 
 
-Calling
--------
+## Calling
 Instantiate and calling the plugin is **very easy**. Just start by include the jQuery library and the plugin on your web page using the generic script markup:
 
 ```js
@@ -100,8 +95,7 @@ $(function(){
 ```
 
 
-Options
--------
+## Options
 ### Quick reference
 Formalist call with all default options as defined in the source.
 
@@ -198,8 +192,7 @@ Default: `function(box, field, type, value, name, id) {return correlate(box, fie
 Correlate is a callback method **called for the correlation between the input fields and the box**. You can override the default method of Formalist by adding your own function here. This method must return a boolean to properly work: if `True`, Formalist will call the `hide()` method, otherwise, the `show()` method will be called. This function allow you to directly access to some properties of the current object: **take a look at the input demo** to see an example of how override this method.
 
 
-Examples
---------
+## Examples
 Some examples working with the default plugin options.
 
 ### Basic example
@@ -233,8 +226,7 @@ This example behaves this way:
 - when "Yes" or "No" are unchecked, the associated box are both hidden
 
 
-Demos
------
+## Demos
 Some html demos are available and listed below. Please don't forget to read the **[compatibility section](https://github.com/xavierfoucrier/formalist/blob/master/README.md#compatibility)** before testing them.
 
 1. [Basic demo](https://xavierfoucrier.github.io/formalist/index.html) - a simple demo with checkboxs
